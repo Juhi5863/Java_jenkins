@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/Juhi5863/Java_jenkins.git'
+                git branch: 'main', url: 'https://github.com/Juhi5863/Java_jenkins.git'
             }
         }
         stage('Build') {
