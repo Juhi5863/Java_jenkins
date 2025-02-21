@@ -20,11 +20,12 @@ pipeline {
             }
         }
 
-        stage('Deploy to Tomcat') {
+       stage('Deploy to Tomcat') {
     steps {
-        sh 'cp target/Java_jenkins-1.0-SNAPSHOT.war /opt/tomcat9/webapps/'
+        sh 'sudo cp target/Java_jenkins-1.0-SNAPSHOT.war /opt/tomcat9/webapps/'
     }
 }
+
 
     }
 }
