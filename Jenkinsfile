@@ -19,7 +19,12 @@ pipeline {
                 sh 'mvn test'
             }
         }
-       
+       stage('Deploy to Tomcat') {
+    steps {
+        sh 'cp target/*.war /var/lib/tomcat9/webapps/'
+    }
+}
+
 
 
     }
