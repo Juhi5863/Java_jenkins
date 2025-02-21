@@ -21,8 +21,8 @@ pipeline {
         }
 
         stage('Deploy to Tomcat') {
-   steps {
-        sh 'cp target/*.war /var/lib/tomcat9/webapps/'
+    steps {
+        sh 'cp target/Java_jenkins-1.0-SNAPSHOT.war /opt/tomcat9/webapps/'
     }
 }
 
